@@ -1,0 +1,14 @@
+nav {
+  font-family: 'Bungee', cursive;
+  background-color: #4056A1;
+  height: 120px;
+  width:100%;
+  color: #FFFF;
+  padding:0.75em;
+ }
+
+ .nav-right {
+   text-align: right;
+   font-size: large;
+   font-family: sans-serif;
+ }

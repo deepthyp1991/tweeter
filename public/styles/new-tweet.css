@@ -1,0 +1,30 @@
+.new-tweet {
+ margin-top: 20px;
+}
+.new-tweet textarea {
+  font-weight: 600;
+  width: 100%;
+  border-top: none;
+  border-left: none; 
+  border-right: none;
+  border-bottom: 5px solid gray;
+  background-color: transparent;
+  margin-bottom: 20px;
+
+}
+
+.new-tweet button {
+  background-color: purple;
+  position: absolute;
+  left : 160px;
+  width:150px
+}
+
+.new-tweet .counter {
+  float: right;
+}
+.new-tweet label {
+  font-weight: 600;
+  float: left
+}
+
