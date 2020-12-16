@@ -1,16 +1,10 @@
-.head-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-header {
-  height:400px;
-  width:100%;
+header{
+  height: 400px;
+  width: 100%;
   background-color: #cc8800;
   background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
-}
-
-h2 {
-  text-align: center;
-}
+  display :flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }

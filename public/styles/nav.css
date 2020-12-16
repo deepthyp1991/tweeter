@@ -1,14 +1,26 @@
-nav {
-  font-family: 'Bungee', cursive;
-  background-color: #4056A1;
+nav{
   height: 120px;
-  width:100%;
-  color: #FFFF;
-  padding:0.75em;
+  width: 100%;
+  background-color: #4056A1;
+  color:#FFFFFF;
+  padding :1.5em ;
+  display: flex;
+  justify-content:space-between;
  }
-
- .nav-right {
-   text-align: right;
-   font-size: large;
-   font-family: sans-serif;
+.logo{
+  font-family: 'Bungee', cursive;
  }
+.btn{
+  display:flex;
+  flex-direction: column;
+}
+.display{
+  color: red;
+  transform: rotate(90deg);
+  font-size: 32px;
+  font-weight: bold;
+}
+a{
+  display:flex;
+  justify-content:center
+}

@@ -3,9 +3,8 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-html {
+ html {
   box-sizing: border-box;
-
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -18,17 +17,17 @@ html {
 body {
   color: #545149;
   background-color: #f4f1ec;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif;
- }
- 
+  display: flex;
+  flex-direction: column;
+
+}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
- .container {
-   width:90%;
-   text-align: center;
-   background-color: #f4f1ec;
+ main{
+   width: 90%;
+  align-self: center;
  }
