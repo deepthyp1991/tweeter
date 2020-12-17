@@ -28,8 +28,6 @@ $(document).ready(function() {
     return div.innerHTML;
   }
 
-  
-  
   // create an article
   const createTweetElement = (tweet) => {
     const safeHTML = `<p>${escape(tweet.content.text)}</p>`;
