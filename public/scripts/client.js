@@ -21,9 +21,18 @@ $(document).ready(function() {
       return Math.trunc(Difference_In_Secondes) +" secondes"
     }
   }
+
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
+  
   
   // create an article
   const createTweetElement = (tweet) => {
+    const safeHTML = `<p>${escape(tweet.content.text)}</p>`;
     const element = 
       `<article>
           <header class="tweet-header">
@@ -34,7 +43,7 @@ $(document).ready(function() {
             <h3 class="hide">${tweet.user.handle}</h3>
           </header>
           <div class ="tweet-content">
-            <p>${tweet.content.text}</p>
+            ${safeHTML}
           </div>
           <footer class ="footer-tweet">
             <output> ${timePassed(tweet.created_at)}</output>
