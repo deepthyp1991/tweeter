@@ -1,8 +1,5 @@
 $(document).ready(function() {
-
-
-
-  const timePassed = (time) => {
+   const timePassed = (time) => {
     let Difference_In_Time = Date.now() - new Date(time)
     let Difference_In_Secondes= Difference_In_Time / 1000
     let Difference_In_Minutes = Difference_In_Time / (1000 * 60)
@@ -69,27 +66,17 @@ $(document).ready(function() {
        url: url,
      })
        .then((result) => {
-         // success. getting the result here
          console.log(result);
          renderTweets(result);
        })
        .catch((err) => console.log(err));
   }
-
-  // on loading fetch the tweets and add them to the DOM
   loadTweets();
-
-
   $('form').on('submit', function(event) {
-    //prevent the default form submission behaviour
     event.preventDefault();
-    // create the url for the request
     const url = `http://localhost:8080/tweets`;
-    // if the tweet is not empty and below 140 cararcters post the tweet 
     if ($("#tweet-text").val() && $("#tweet-text").val().length <=140) {
-      //turn the data into a query string
       const values = $("#tweet-text").serialize();
-      // Create an AJAX request POST
       $.ajax({
           url: url,
           type: "post",
@@ -107,8 +94,5 @@ $(document).ready(function() {
     } else {
       alert("The tweet is not present");
     }
-   
-   
-});   
-
-});
+   });   
+  });
