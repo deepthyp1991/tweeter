@@ -1,9 +1,13 @@
 button{
   font-family: 'Bungee', cursive;
   background-color:  #4056A1;
-  border: transparent;
+  border: none;
   color: white;
+  cursor: pointer;
   
+}
+button:hover{
+  border : solid 5px rgb(172, 232, 252)
 }
 label{
   color:  rgb(92, 90, 90);
@@ -12,6 +16,16 @@ label{
 .tweet-containerr{
   border-bottom: solid 5px rgb(92, 90, 90);
   padding-bottom:1rem ;
+}
+.error{
+  border: solid 2px red;
+  color: red;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  display: none;
 }
 .form-footer{
   margin-top: 15px;

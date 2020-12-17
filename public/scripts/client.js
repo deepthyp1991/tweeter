@@ -1,5 +1,8 @@
 $(document).ready(function() {
-   const timePassed = (time) => {
+
+
+  // get the time difference between now and the date of the creation of the tweet in minutes or secondes or hours or days or years.
+  const timePassed = (time) => {
     let Difference_In_Time = Date.now() - new Date(time)
     let Difference_In_Secondes= Difference_In_Time / 1000
     let Difference_In_Minutes = Difference_In_Time / (1000 * 60)
@@ -66,33 +69,53 @@ $(document).ready(function() {
        url: url,
      })
        .then((result) => {
-         console.log(result);
+         // success. getting the result here
          renderTweets(result);
        })
        .catch((err) => console.log(err));
   }
+
+  // on loading fetch the tweets and add them to the DOM
   loadTweets();
+
+
   $('form').on('submit', function(event) {
+    //prevent the default form submission behaviour
     event.preventDefault();
+    // create the url for the request
     const url = `http://localhost:8080/tweets`;
+    // if the tweet is not empty and below 140 cararcters post the tweet 
     if ($("#tweet-text").val() && $("#tweet-text").val().length <=140) {
+
+      $('.error').hide();
+
+      //turn the data into a query string
       const values = $("#tweet-text").serialize();
+      // Create an AJAX request POST
       $.ajax({
           url: url,
           type: "post",
           data: values ,
           success: function (response) {
             $("#tweet-text").val("");
-            console.log("request done");
+            $('.counter').text(140);
+            $("#tweets-container").empty();
+            loadTweets();
           },
           error: function(jqXHR, textStatus, errorThrown) {
             console.log(textStatus, errorThrown);
           }
       });
     } else if ($("#tweet-text").val() && $("#tweet-text").val().length > 140) {
-      alert("The tweet content is too long");
+      // show the error message
+      $('.error').html(`&#9888 Too long, plz respect our arbitary limit of 140 char! &#9888`);
+      $('.error').show();
     } else {
-      alert("The tweet is not present");
+      $('.error').html(`&#9888 The tweet is empty please type some tweet! &#9888`);
+      $('.error').show();
     }
-   });   
-  });
+   
+   
+});   
+
+});

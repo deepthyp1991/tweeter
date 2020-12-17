@@ -5,14 +5,13 @@ article{
   padding-bottom: 10px;
   border: solid 5px rgb(92, 90, 90);
  }
- .hide {
-  display: none;
-}
 
  article:hover .hide{
   box-shadow: 10px 5px 5px rgb(112, 109, 109);
  }
-
+ .hide {
+  display: none;
+}
  .avatar{
    width: 100px;
    height: 100px;
