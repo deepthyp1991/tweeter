@@ -1,17 +1,25 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a simple, single-page Twitter clone. It was built as a way to learn front-end development, including responsive design, jQuery, and AJAX. As this project does not connect to a database, tweets are stored in an in-memory array and are deleted upon server exit.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+# Screenshots
+!["Validation Form"](https://github.com/deepthyp1991/tweeter/blob/master/docs/tweeter-home.png?raw=true)
 
-## Getting Started
+!["Tweeter home"](https://github.com/deepthyp1991/tweeter/blob/master/docs/tweeter-form-validation.png?raw=true)
 
-1. Fork this repository, then clone your fork of this repository.
-2. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+!["Tweeter mobile view"](https://github.com/deepthyp1991/tweeter/blob/master/docs/tweeter-mobile-view.png?raw=true)
+
 
 ## Dependencies
 
 - Express
 - Node 5.10.x or above
+- nodemon 1.9.2 or above
+
+## Getting started
+
+1. Clone this repository.
+2. Install dependencies using the npm install command.
+3. Start the web server using the npm run local command. The app will be served at http://localhost:8080/.
+4. Visit http://localhost:8080/ in your browser.
+
