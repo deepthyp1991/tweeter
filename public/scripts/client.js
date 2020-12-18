@@ -88,9 +88,7 @@ $(document).ready(function() {
     const url = `http://localhost:8080/tweets`;
     // if the tweet is not empty and below 140 cararcters post the tweet 
     if ($("#tweet-text").val() && $("#tweet-text").val().length <=140) {
-
       $('.error').hide();
-
       //turn the data into a query string
       const values = $("#tweet-text").serialize();
       // Create an AJAX request POST
@@ -116,8 +114,5 @@ $(document).ready(function() {
       $('.error').html(`&#9888 Plz input some text! &#9888`);
       $('.error').show();
     }
-   
-   
-});   
-
+});  
 });
