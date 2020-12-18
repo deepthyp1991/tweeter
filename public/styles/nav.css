@@ -23,9 +23,9 @@ nav{
   font-weight: bold;
 
 }
-@keyframes anime{
+/* @keyframes anime{
   50% {transform: translate(0px, 10px); }
-}
+} */
 a{
  color: red;
  font-weight: bold;
