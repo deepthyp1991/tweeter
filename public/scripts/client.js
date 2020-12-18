@@ -1,6 +1,4 @@
 $(document).ready(function() {
-
-
   // get the time difference between now and the date of the creation of the tweet in minutes or secondes or hours or days or years.
   const timePassed = (time) => {
     let Difference_In_Time = Date.now() - new Date(time)
@@ -45,7 +43,7 @@ $(document).ready(function() {
           </div>
           <footer class ="footer-tweet">
             <output> ${timePassed(tweet.created_at)}</output>
-            <span class="emoji">🏴 ↹ 🖤❤</span>
+            <span class="emoji"> 🏴↹ 🖤❤</span>
           </footer>
       </article>`
 
@@ -67,24 +65,21 @@ $(document).ready(function() {
  
   // using AJAX to fetch tweets 
   const loadTweets = () => {
-     // create the url for the request
-     const url = `http://localhost:8080/tweets`;
-
+    const url = `http://localhost:8080/tweets`;   // create the url for the request
      // Create an AJAX request GET
      $.ajax({
        method: 'GET', 
        url: url,
      })
-       .then((result) => {
-         // success. getting the result here
-         renderTweets(result);
+     .then((result) => {
+       // success. getting the result here
+       renderTweets(result);
        })
        .catch((err) => console.log(err));
   }
 
   // on loading fetch the tweets and add them to the DOM
   loadTweets();
-
 
   $('form').on('submit', function(event) {
     //prevent the default form submission behaviour
@@ -118,7 +113,7 @@ $(document).ready(function() {
       $('.error').html(`&#9888 Too long, plz respect our arbitary limit of 140 char! &#9888`);
       $('.error').show();
     } else {
-      $('.error').html(`&#9888 The tweet is empty please type some tweet! &#9888`);
+      $('.error').html(`&#9888 Plz input some text! &#9888`);
       $('.error').show();
     }
    
